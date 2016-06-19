@@ -1,0 +1,34 @@
+---
+- name: Add deb https://deb.nodesource.com/{{ node_version }} {{ distro }} main repo
+  sudo: yes
+  apt_repository: 
+    repo:   deb https://deb.nodesource.com/{{ node_version }} {{ distro }} main
+    state:  "{{ state }}"
+    update_cache: yes
+ 
+- name: Add deb-src https://deb.nodesource.com/{{ node_version }} {{ distro }} main repo
+  sudo: yes
+  apt_repository: 
+    repo:   deb-src https://deb.nodesource.com/{{ node_version }} {{ distro }} main 
+    state:  "{{ state }}"
+    update_cache: yes
+ 
+- name: Install key from https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  sudo: yes
+  apt_key: 
+    url:    https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state:  "{{ state }}"
+ 
+- name: "Make sure nodejs is installed"
+  sudo:   yes
+  apt: 
+    name:         "nodejs"
+    state:        "{{ state }}"
+    update_cache: yes
+ 
+- name: make sure the latest npm is installed
+  sudo: yes
+  npm: 
+    name:   npm 
+    global: true 
+    state:  latest

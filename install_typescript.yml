@@ -1,0 +1,8 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: test
+  gather_facts: False
+  roles:
+  - name: node
+  - name: typescript
+  - name: gulp

@@ -1,0 +1,4 @@
+---
+- name: make sure typescript is installed
+  # become: yes
+  shell: npm install -g typescript 

@@ -1,0 +1,13 @@
+---
+galaxy_info:
+  author: Michael Pichler
+  description: install node and npm for tooling
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+  - name: Debian
+  categories:
+  - system
+dependencies: []
+ 
