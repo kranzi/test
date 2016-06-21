@@ -1,7 +1,0 @@
----
-# node version to install
-node_version: node_4.x
-# Ubuntu or Debian distro ( Mint has Ubuntu distro )
-distro:   trusty
-# To uninstall set state to absent
-state:        present
