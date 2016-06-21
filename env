@@ -1,0 +1,6 @@
+image_name="typescript-devel"
+
+inode () 	{ docker run -it -v $( pwd ):/tmp $image_name node $@; }
+node () 	{ docker run -v $( pwd ):/tmp $image_name node $@; }
+npm () 		{ docker run -v $( pwd ):/tmp $image_name npm $@; }
+gulp () 	{ docker run -v $( pwd ):/tmp $image_name gulp $@; }

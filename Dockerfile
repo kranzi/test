@@ -1,0 +1,9 @@
+FROM williamyeh/ansible:ubuntu16.04
+# ==> Copying Ansible playbook...
+WORKDIR /tmp
+COPY  ./files  /tmp
+# ==> Creating inventory file...
+RUN echo localhost > inventory
+# ==> Executing Ansible...
+RUN ansible-playbook -i inventory install_typescript.yml \
+      --connection=local --sudo
