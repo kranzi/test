@@ -33,7 +33,7 @@ else
 fi
 
 echo "Testing typescript..."
-if typescript -v | grep -q $typescript_version
+if tsc -v | grep -q $typescript_version
 then
 	echo "typescript works."
 else
