@@ -1,4 +1,4 @@
-FROM williamyeh/ansible:ubuntu16.04
+FROM node-devel
 # ==> Copying Ansible playbook...
 WORKDIR /tmp
 COPY  ./files  /tmp

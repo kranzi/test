@@ -3,5 +3,4 @@
 - hosts: all
   gather_facts: False
   roles:
-  - name: typescript
-  - name: gulp
+  - name: node
