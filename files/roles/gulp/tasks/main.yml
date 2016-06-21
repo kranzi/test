@@ -1,4 +1,6 @@
 ---
 - name: make sure gulp is installed
   become: yes
-  shell: npm install -g gulp-cli 
+  npm: 
+    name: gulp
+    global: yes
